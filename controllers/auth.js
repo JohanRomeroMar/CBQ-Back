@@ -2,11 +2,16 @@ const {response} = require('express');
 const userModel = require('../models/users');
 
 const crearUsuario = (req, res) =>{
-    const {nombre, email, pass} = req.body
+    const {fName, lName, docType, doc, birthDate, email, phoneNum, gender} = req.body
     userModel.create({
-        "name": nombre,
-        "email": email,
-        "pass": pass
+      "fName": fName,
+      "lName": lName,
+      "docType": docType,
+      "doc": doc,
+      "birthDate": birthDate,
+      "email": email,
+      "phoneNum": phoneNum,
+      "gender": gender
     }, function(err, result) {
         if (err) {
           res.send(err);
