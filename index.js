@@ -5,7 +5,7 @@ const authRoutes = require('./routes/auth');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-mongoose.connect('mongodb+srv://johan:Kisure7845@cluster0.2pyne.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {useUnifiedTopology: true, useNewUrlParser: true}).then(res =>{
+mongoose.connect(`${process.env.DB_URL}`, {useUnifiedTopology: true, useNewUrlParser: true}).then(res =>{
     //crear servidor express
     const app = express();
 
