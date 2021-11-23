@@ -12,6 +12,7 @@ const crearUsuario = (req, res) =>{
       "email": email,
       "phoneNum": phoneNum,
       "gender": gender
+      //"CBQA": CBQA
     }, function(err, result) {
         if (err) {
           res.send(err);

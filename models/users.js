@@ -9,6 +9,7 @@ const schema = mongoose.Schema({
     email: String,
     phoneNum: String,
     gender: String
+    //CBQA: Array
 })
 
 module.exports = mongoose.model("User", schema);
