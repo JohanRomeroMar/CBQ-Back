@@ -8,8 +8,9 @@ const schema = mongoose.Schema({
     birthDate: String,
     email: String,
     phoneNum: String,
-    gender: String
-    //CBQA: Array
+    gender: String,
+    CBQA: Array,
+    CBQVA: Array
 })
 
 module.exports = mongoose.model("User", schema);

@@ -2,7 +2,9 @@ const {response} = require('express');
 const userModel = require('../models/users');
 
 const crearUsuario = (req, res) =>{
-    const {fName, lName, docType, doc, birthDate, email, phoneNum, gender} = req.body
+    const {fName, lName, docType, doc, birthDate, email, phoneNum, gender, CBQA, CBQVA} = req.body
+    console.log(CBQVA);
+    console.log(req.body);
     userModel.create({
       "fName": fName,
       "lName": lName,
@@ -11,8 +13,9 @@ const crearUsuario = (req, res) =>{
       "birthDate": birthDate,
       "email": email,
       "phoneNum": phoneNum,
-      "gender": gender
-      //"CBQA": CBQA
+      "gender": gender,
+      "CBQA": CBQA,
+      "CBQVA": CBQVA
     }, function(err, result) {
         if (err) {
           res.send(err);
