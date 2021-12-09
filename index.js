@@ -4,6 +4,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const bcrypt = require('bcrypt');
 
 mongoose.connect(`${process.env.DB_URL}`, {useUnifiedTopology: true, useNewUrlParser: true}).then(res =>{
     //crear servidor express

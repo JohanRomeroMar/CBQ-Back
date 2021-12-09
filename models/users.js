@@ -10,7 +10,10 @@ const schema = mongoose.Schema({
     phoneNum: String,
     gender: String,
     CBQA: Array,
-    CBQVA: Array
+    CBQVA: Array,
+    Departamento: String,
+    Ciudad: String,
+    userType: String
 })
 
 module.exports = mongoose.model("User", schema);
